@@ -1,0 +1,1 @@
+debian/pom.xml --no-parent --java-lib --usj-name=oro --artifact=jakarta-oro.jar

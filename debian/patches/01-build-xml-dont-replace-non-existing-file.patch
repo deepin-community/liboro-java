@@ -1,0 +1,15 @@
+Description: Avoid a replace on a file that does not exist.
+
+--- a/build.xml	2006-04-24 22:09:08.000000000 +0000
++++ b/build.xml	2006-04-24 22:09:37.000000000 +0000
+@@ -162,8 +162,8 @@
+             header="&lt;a href=&apos;http://jakarta.apache.org/oro/&apos; target=_top&gt;&lt;img src=&apos;{@docroot}/../images/logoSmall.gif&apos; alt=&apos;Jakarta ORO&apos; width=48 height=47 align=center border=0 hspace=1 vspace=1&gt;&lt;/a&gt;"
+             bottom="Copyright &#169; ${year} Apache Software Foundation. All Rights Reserved.">
+          </javadoc>
+-         <replace file="${javadoc.destdir}/overview-frame.html"
+-                  token="{@docroot}" value="."/>
++         <!-- replace file="${javadoc.destdir}/overview-frame.html"
++                  token="{@docroot}" value="."/ -->
+          <replace dir="${javadoc.destdir}" includes="**/*.html"
+                   token="@version@" value="${version}"/>
+     </target>

@@ -1,0 +1,3 @@
+version=3
+opts=dversionmangle=s/a$// \
+https://archive.apache.org/dist/jakarta/oro/source/jakarta-oro-(.*).tar.gz debian debian/orig-tar.sh

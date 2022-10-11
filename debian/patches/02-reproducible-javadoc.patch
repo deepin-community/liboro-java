@@ -1,0 +1,15 @@
+Description: Make the javadoc reproducible
+Author: Emmanuel Bourg <ebourg@apache.org>
+Forwarded: not-needed
+--- a/build.xml
++++ b/build.xml
+@@ -159,6 +159,9 @@
+             version="true"
+             windowtitle="${name} ${version} API"
+             doctitle="${name} ${version} API"
++            additionalparam="-notimestamp"
++            locale="en_US"
++            encoding="UTF-8"
+             header="&lt;a href=&apos;http://jakarta.apache.org/oro/&apos; target=_top&gt;&lt;img src=&apos;{@docroot}/../images/logoSmall.gif&apos; alt=&apos;Jakarta ORO&apos; width=48 height=47 align=center border=0 hspace=1 vspace=1&gt;&lt;/a&gt;"
+             bottom="Copyright &#169; ${year} Apache Software Foundation. All Rights Reserved.">
+          </javadoc>

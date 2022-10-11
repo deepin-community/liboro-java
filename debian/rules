@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with maven-repo-helper
+
+override_dh_auto_build:
+	dh_auto_build -- jar javadocs '-DDATE=$(shell dpkg-parsechangelog --show-field Date)'
+	jar umf debian/osgi.MF jakarta-oro.jar
